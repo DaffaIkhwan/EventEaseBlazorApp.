@@ -3,3 +3,13 @@
 @code {
 
 }
+@page "/register"
+<EditForm Model="user" OnValidSubmit="HandleSubmit">
+    <DataAnnotationsValidator />
+    <InputText @bind-Value="user.Name" placeholder="Your Name" />
+    <button type="submit">Register</button>
+</EditForm>
+@code {
+    private UserModel user = new();
+    void HandleSubmit() { Console.WriteLine($"Registered: {user.Name}"); }
+}

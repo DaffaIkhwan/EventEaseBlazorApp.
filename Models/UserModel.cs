@@ -1,6 +1,6 @@
-﻿namespace EventEaseBlazorApp.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+public class UserModel
 {
-    public class UserModel
-    {
-    }
+    [Required] public string Name { get; set; } = "";
 }

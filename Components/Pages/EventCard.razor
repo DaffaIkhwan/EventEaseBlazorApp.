@@ -1,5 +1,13 @@
-﻿<h3>EventCard</h3>
+﻿@using EventEase.Models
+
+<h3>EventCard</h3>
 
 @code {
-
+    [Parameter] public EventModel Event { get; set; }
 }
+
+<div>
+    <h3>@Event.Title</h3>
+    <p>@Event.Description</p>
+    <input type="text" @bind="Event.Title" />
+</div>

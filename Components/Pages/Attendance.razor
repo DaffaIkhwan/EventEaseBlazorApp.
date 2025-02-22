@@ -1,5 +1,11 @@
-﻿<h3>Attendance</h3>
-
+﻿@page "/attendance"
+<h3>Attendance Tracker</h3>
+<ul>
+    @foreach (var attendee in attendees)
+    {
+        <li>@attendee</li>
+    }
+</ul>
 @code {
-
+    private List<string> attendees = new() { "Alice", "Bob" };
 }
